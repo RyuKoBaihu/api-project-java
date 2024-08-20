@@ -1,0 +1,15 @@
+# Use root/example as user/password credentials
+version: '3.8'
+
+services:
+
+  mysql:
+    image: mysql:8.0.22
+    container_name: mysql
+    ports:
+      - 8086:8086
+    environment:
+      MYSQL_USER: sales
+      MYSQL_PASSWORD: salesPassword
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sales_db
